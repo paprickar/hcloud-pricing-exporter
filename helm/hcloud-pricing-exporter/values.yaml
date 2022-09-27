@@ -35,6 +35,11 @@ serviceMonitor:
   labels:
   scrapeTimeout:
 
+relabeling:
+    enabled: true
+    regex: .*
+
+
 resources: { }
 
 nodeSelector: { }

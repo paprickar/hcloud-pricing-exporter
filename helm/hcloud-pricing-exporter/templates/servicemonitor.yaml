@@ -18,6 +18,12 @@ spec:
       {{- with .Values.serviceMonitor.scrapeTimeout }}
       scrapeTimeout: {{ . }}
       {{- end }}
+      {{- if .Values.relabeling.enabled }}
+      metricRelabelings:
+      - action: keep
+        sourceLabels: [__name__]
+        regex: {{ .Values.relabeling.regex }}
+      {{- end }}
   namespaceSelector:
     matchNames:
       - "{{ .Release.Namespace }}"
