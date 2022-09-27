@@ -1,2 +1,6 @@
 .idea
 *.iml
+
+.env
+.vscode/
+__debug_bin

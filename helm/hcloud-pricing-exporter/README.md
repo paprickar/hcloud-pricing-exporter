@@ -1,7 +1,7 @@
 # hcloud-pricing-exporter Helm Chart
 
-[![Build Status](https://img.shields.io/github/workflow/status/jangraefen/hcloud-pricing-exporter/Build?logo=GitHub)](https://github.com/jangraefen/hcloud-pricing-exporter/actions?query=workflow:Build)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jangraefen/hcloud-pricing-exporter)](https://hub.docker.com/r/jangraefen/hcloud-pricing-exporter)
+[![Build Status](https://img.shields.io/github/workflow/status/paprickar/hcloud-pricing-exporter/Build?logo=GitHub)](https://github.com/paprickar/hcloud-pricing-exporter/actions?query=workflow:Build)
+[![Docker Pulls](https://img.shields.io/docker/pulls/paprickar/hcloud-pricing-exporter)](https://hub.docker.com/r/paprickar/hcloud-pricing-exporter)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/hcloud-pricing-exporter)](https://artifacthub.io/packages/search?repo=hcloud-pricing-exporter)
 
 A Prometheus exporter that connects to your HCloud account and collects data on your current expenses. The aim is to
@@ -16,7 +16,7 @@ HCloud API does not provide an hourly expense.
 To run the exporter from the CLI you need to run the following commands:
 
 ```shell
-helm repo add hcloud-pricing-exporter https://jangraefen.github.io/hcloud-pricing-exporter
+helm repo add hcloud-pricing-exporter https://paprickar.github.io/hcloud-pricing-exporter
 helm repo update
 helm upgrade --install hcloud-pricing-exporter hcloud-pricing-exporter/hcloud-pricing-exporter --version {VERSION}
 ```
@@ -26,7 +26,7 @@ helm upgrade --install hcloud-pricing-exporter hcloud-pricing-exporter/hcloud-pr
 Parameter                      | Default                                | Description
 ------------------------------ | -------------------------------------- | -----------
 `replicaCount`                 | `1`                                    |
-`image.repository`             | `"jangraefen/hcloud-pricing-exporter"` |
+`image.repository`             | `"paprickar/hcloud-pricing-exporter"` |
 `image.pullPolicy`             | `"IfNotPresent"`                       |
 `image.tag`                    | `""`                                   |
 `imagePullSecrets`             | `[]`                                   |

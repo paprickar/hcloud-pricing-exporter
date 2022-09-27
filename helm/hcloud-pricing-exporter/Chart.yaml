@@ -1,11 +1,11 @@
 apiVersion: v2
 name: hcloud-pricing-exporter
 description: A prometheus exporter for the current pricing and costs of your HCloud account
-home: https://github.com/jangraefen/hcloud-pricing-exporter
+home: https://github.com/paprickar/hcloud-pricing-exporter
 maintainers:
   - name: Jan Graefen
 sources:
-  - https://github.com/jangraefen/hcloud-pricing-exporter
+  - https://github.com/paprickar/hcloud-pricing-exporter
 keywords:
   - hetzner
   - hcloud

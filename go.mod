@@ -1,4 +1,4 @@
-module github.com/jangraefen/hcloud-pricing-exporter
+module github.com/paprickar/hcloud-pricing-exporter
 
 go 1.18
 

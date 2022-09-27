@@ -1,9 +1,9 @@
 # hcloud-pricing-exporter
 
-[![Build Status](https://img.shields.io/github/workflow/status/jangraefen/hcloud-pricing-exporter/Build?logo=GitHub)](https://github.com/jangraefen/hcloud-pricing-exporter/actions?query=workflow:Build)
-[![PkgGoDev](https://pkg.go.dev/badge/mod/github.com/jangraefen/hcloud-pricing-exporter)](https://pkg.go.dev/mod/github.com/jangraefen/hcloud-pricing-exporter)
-[![Go Report Card](https://goreportcard.com/badge/github.com/jangraefen/hcloud-pricing-exporter)](https://goreportcard.com/report/github.com/jangraefen/hcloud-pricing-exporter)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jangraefen/hcloud-pricing-exporter)](https://hub.docker.com/r/jangraefen/hcloud-pricing-exporter)
+[![Build Status](https://img.shields.io/github/workflow/status/paprickar/hcloud-pricing-exporter/Build?logo=GitHub)](https://github.com/paprickar/hcloud-pricing-exporter/actions?query=workflow:Build)
+[![PkgGoDev](https://pkg.go.dev/badge/mod/github.com/paprickar/hcloud-pricing-exporter)](https://pkg.go.dev/mod/github.com/paprickar/hcloud-pricing-exporter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/paprickar/hcloud-pricing-exporter)](https://goreportcard.com/report/github.com/paprickar/hcloud-pricing-exporter)
+[![Docker Pulls](https://img.shields.io/docker/pulls/paprickar/hcloud-pricing-exporter)](https://hub.docker.com/r/paprickar/hcloud-pricing-exporter)
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/hcloud-pricing-exporter)](https://artifacthub.io/packages/search?repo=hcloud-pricing-exporter)
 
 A Prometheus exporter that connects to your HCloud account and collects data on your current expenses. The aim is to
@@ -32,14 +32,14 @@ export HCLOUD_TOKEN=<TOKEN>
 Alternatively, the exporter can be run by using the provided docker image:
 
 ```shell
-docker run jangraefen/hcloud-pricing-exporter:latest -e HCLOUD_TOKEN=<TOKEN> -p 8080:8080
+docker run paprickar/hcloud-pricing-exporter:latest -e HCLOUD_TOKEN=<TOKEN> -p 8080:8080
 ```
 
 If you want to deploy the exporter to a Kubernetes environment, you can use the provided helm chart. Just perform the
 following commands:
 
 ```shell
-helm repo add hcloud-pricing-exporter https://jangraefen.github.io/hcloud-pricing-exporter
+helm repo add hcloud-pricing-exporter https://paprickar.github.io/hcloud-pricing-exporter
 helm repo update
 helm upgrade --install hcloud-pricing-exporter hcloud-pricing-exporter/hcloud-pricing-exporter --version {VERSION}
 ```

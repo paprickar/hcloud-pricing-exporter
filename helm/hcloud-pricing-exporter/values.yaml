@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: jangraefen/hcloud-pricing-exporter
+  repository: paprickar/hcloud-pricing-exporter
   pullPolicy: IfNotPresent
   tag: ""
 

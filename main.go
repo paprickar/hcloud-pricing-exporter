@@ -5,11 +5,12 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/hetznercloud/hcloud-go/hcloud"
-	"github.com/jangraefen/hcloud-pricing-exporter/fetcher"
 	"github.com/jtaczanowski/go-scheduler"
+	"github.com/paprickar/hcloud-pricing-exporter/fetcher"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
@@ -66,7 +67,13 @@ func main() {
 	fetchers.RegisterCollectors(registry)
 
 	http.Handle("/metrics", promhttp.HandlerFor(registry, promhttp.HandlerOpts{}))
-	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
+
+	server := &http.Server{
+		Addr:              ":" + strconv.FormatUint(uint64(port), 10),
+		ReadHeaderTimeout: 3 * time.Second,
+	}
+
+	if err := server.ListenAndServe(); err != nil {
 		panic(err)
 	}
 }
