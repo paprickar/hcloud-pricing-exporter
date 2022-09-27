@@ -47,3 +47,7 @@ nodeSelector: { }
 tolerations: [ ]
 
 affinity: { }
+
+container:
+  command: ["./run"]
+  args: [""]

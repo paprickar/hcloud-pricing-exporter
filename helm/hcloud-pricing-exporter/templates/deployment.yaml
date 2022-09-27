@@ -25,6 +25,8 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          command: {{ .Values.container.command }}
+          args: {{ .Values.container.args }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: HCLOUD_TOKEN
