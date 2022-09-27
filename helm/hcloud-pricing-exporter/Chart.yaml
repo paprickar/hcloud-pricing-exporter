@@ -16,8 +16,8 @@ keywords:
 
 type: application
 
-version: 0.4.6
-appVersion: 0.4.6
+version: 0.4.7
+appVersion: 0.4.7
 
 annotations:
   artifacthub.io/changes: |
