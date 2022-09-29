@@ -23,6 +23,8 @@ spec:
       - action: keep
         sourceLabels: [__name__]
         regex: {{ .Values.relabeling.regex }}
+      - regex: instance
+        action: labeldrop
       {{- end }}
   namespaceSelector:
     matchNames:
