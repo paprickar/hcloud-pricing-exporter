@@ -39,3 +39,11 @@ func parseToGauge(gauge prometheus.Gauge, value string) {
 	}
 	gauge.Set(parsed)
 }
+
+func parseToCounter(counter prometheus.Counter, value string) {
+	parsed, err := strconv.ParseFloat(value, 32)
+	if err != nil {
+		panic(err)
+	}
+	counter.Add(parsed)
+}

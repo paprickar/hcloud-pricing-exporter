@@ -17,7 +17,7 @@ import (
 
 const (
 	defaultPort          = 8080
-	defaultFetchInterval = 1 * time.Minute
+	defaultFetchInterval = 5 * time.Minute
 )
 
 var (
